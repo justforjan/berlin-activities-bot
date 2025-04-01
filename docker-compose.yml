@@ -1,0 +1,13 @@
+services:
+  database:
+    image: ankane/pgvector
+    volumes:
+      - database:/var/lib/postgresql/data
+    ports:
+      - "6543:5432"
+    env_file:
+      - .env
+
+
+volumes:
+  database:
